@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.leon.surveyapp">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +18,7 @@
         <activity
             android:name=".Controller.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,19 +31,22 @@
         <activity
             android:name=".Controller.SignInActivity"
             android:label="@string/signIn"
-            android:parentActivityName=".Controller.MainActivity">
-
-        </activity>
+            android:parentActivityName=".Controller.MainActivity" />
         <activity
             android:name=".Controller.SignUpActivity"
             android:label="@string/signUp"
-            android:parentActivityName=".Controller.MainActivity">
-        </activity>
+            android:parentActivityName=".Controller.MainActivity" />
         <activity
-            android:label="@string/app_name"
-            android:name=".Controller.CentActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/Tema1"/>
+            android:name=".Controller.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.Test2Activity"
+            android:label="@string/title_activity_test2" />
     </application>
 
 </manifest>

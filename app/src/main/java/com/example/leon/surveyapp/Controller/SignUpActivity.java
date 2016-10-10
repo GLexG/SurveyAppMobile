@@ -15,8 +15,5 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
     }
 
-    public void cent(View view) {
-        Intent intent = new Intent(this, CentActivity.class);
-        startActivity(intent);
-    }
+
 }
