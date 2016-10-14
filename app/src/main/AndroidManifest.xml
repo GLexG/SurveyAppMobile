@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,6 +42,25 @@
             android:name=".Controller.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Search.SearchActivity"
+            android:label="@string/search_activity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data android:name="android.app.default_searchable"
+                android:value="Search.SearchActivity" />
+
+                <meta-data android:name="android.app.searchable"
+                    android:resource="@xml/searchable" />
+
+        </activity>
+
+
         <activity
             android:name=".Controller.TestActivity"
             android:label="@string/title_activity_test"
@@ -47,6 +68,11 @@
         <activity
             android:name=".Controller.Test2Activity"
             android:label="@string/title_activity_test2" />
+
+        <activity
+            android:name=".Api.ApiActivity"
+            android:label="@string/title_weather_api"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

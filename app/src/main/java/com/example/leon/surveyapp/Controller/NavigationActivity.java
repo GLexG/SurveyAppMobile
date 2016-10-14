@@ -19,9 +19,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.leon.surveyapp.Api.ApiActivity;
 import com.example.leon.surveyapp.Fragments.AboutFragment;
 import com.example.leon.surveyapp.Fragments.HomeFragment;
 import com.example.leon.surveyapp.R;
+import com.example.leon.surveyapp.Search.SearchActivity;
 
 
 public class NavigationActivity extends AppCompatActivity
@@ -111,6 +113,11 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.nav_my_surveys) {
             Toast.makeText(this,"My Surveys Clicked",Toast.LENGTH_SHORT).show();
 
+
+            Intent intent = new Intent(this, TestActivity.class);
+            startActivity(intent);
+
+
             /*fragmentClass = BlankJEBENIFragment.class;*/
 
             /*HomeFragment homeFragment = new HomeFragment();
@@ -125,7 +132,10 @@ public class NavigationActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_search) {
-            Intent intent = new Intent(this, TestActivity.class);
+            /*Intent intent = new Intent(this, TestActivity.class);
+            startActivity(intent);*/
+
+            Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
 
             /*HomeFragment homeFragment = new HomeFragment();
@@ -148,6 +158,9 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.nav_help) {
             Toast.makeText(this,"nav_help Clicked",Toast.LENGTH_SHORT).show();
 
+            Intent intent = new Intent(this, ApiActivity.class);
+            startActivity(intent);
+
         }
 
         try {
@@ -165,4 +178,11 @@ public class NavigationActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    /*In your Fragment or Activity you have to inflate this menu xml like usual,
+    then you can look for the MenuItem which contains the SearchView and implement the OnQueryTextListener
+    which we are going to use to listen for changes to the text entered into the SearchView: */
+
+
 }

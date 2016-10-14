@@ -28,5 +28,18 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-v4:23.4.0'
+
+    compile 'com.android.support:cardview-v7:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.4.0'
+
+    //retrofit ->for better organized api calls
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+
+    //sorted list adapter sto je pisao neki lik za Recycler View
+    //compile 'com.github.wrdlbrnft:sorted-list-adapter:0.2.0.1'
+
+    //batalio!!!
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mSearch" type="id">mSearch</item>
+    <item name="mSearch2" type="id">mSearch2</item>
+    <item name="myRecycler" type="id">myRecycler</item>
+</resources>
